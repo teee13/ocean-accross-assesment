@@ -1,5 +1,6 @@
 # Tenant-Based App Terraform Infrastructure
 
+![alt text](image.png)
 
 ## Structure
 
@@ -171,3 +172,14 @@ Strict IAM policies are enforced to restrict data access to the portal that each
 assigned to. All resources are provisioned within the London region (eu-west-2).
 
 KMS keys are used for encryption at rest, and SSL/TLS is enforced at the compute layer.
+
+
+## Portal Access Management 
+
+The ALB rules and targets ensure that the requests go to the correct service and further at the infra layer itself task roles ensure that only the correct associated resources are accessed by a portal.
+
+At DB layer , eacj portal has its own user and password accessed through their individual secrets and hence only accesible to them.
+For shared data a shared database can be used with limited scoped permissions.
+
+To onboard or remove a tenant, app logic and removing their data from db and S3 should suffice ( as per needs and keeping archival data if required).
+These deletions won't affect other portals.
