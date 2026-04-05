@@ -1,10 +1,6 @@
 # Tenant-Based App Terraform Infrastructure
-
-<<<<<<< HEAD
-![alt text](image.png)
-=======
 <img width="3128" height="2968" alt="image" src="https://github.com/user-attachments/assets/4c75a671-c664-41ab-9a93-c0a711f9eb14" />
->>>>>>> a36c1ab201f0d3ca3f1caab6ddb08be843bd2dfa
+
 
 ## Structure
 
